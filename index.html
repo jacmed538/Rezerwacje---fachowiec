@@ -202,15 +202,15 @@
   }
   .add-photo-form{border-top:1px solid var(--line);margin-top:16px;padding-top:16px;}
 
-  /* ---------- STICKY BAR (telefon + rezerwacja, zawsze widoczne) ---------- */
-  body{padding-bottom:66px;} /* miejsce na pasek na dole */
+  /* ---------- STICKY BAR (telefon + rezerwacja, zawsze widoczne na górze) ---------- */
+  body{padding-top:52px;} /* miejsce na pasek na górze */
   .sticky-bar{
-    position:fixed;bottom:0;left:0;right:0;z-index:200;
-    display:flex;background:#fff;border-top:1px solid var(--line);
-    box-shadow:0 -10px 30px -18px rgba(18,35,61,.35);
+    position:fixed;top:0;left:0;right:0;z-index:40; /* niżej niż okna modalne (z-index 50), żeby ich nie zasłaniać */
+    display:flex;background:#fff;border-bottom:1px solid var(--line);
+    box-shadow:0 10px 30px -18px rgba(18,35,61,.35);
   }
   .sticky-bar a{
-    flex:1;text-align:center;padding:15px 10px;font-weight:600;font-size:14.5px;
+    flex:1;text-align:center;padding:14px 10px;font-weight:600;font-size:14.5px;
     text-decoration:none;font-family:'Inter',sans-serif;
   }
   .sticky-call{color:var(--navy);background:#fff;border-right:1px solid var(--line);}
@@ -232,7 +232,8 @@
     .topbar-right{flex-wrap:wrap;gap:8px;}
     .hero-phone{margin-right:0;font-size:12px;padding:7px 12px;}
     #adminBtn{font-size:12px;padding:7px 12px;}
-    .sticky-bar a{font-size:13px;padding:14px 6px;}
+    .sticky-bar a{font-size:13px;padding:12px 6px;}
+    body{padding-top:46px;}
   }
 </style>
 </head>
